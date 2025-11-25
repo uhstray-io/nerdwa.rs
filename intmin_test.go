@@ -12,7 +12,7 @@ func IntMin(a, b int) int {
 	return b
 }
 
-// This is a basic testing function for IntMin.
+// This is a basic testing function.
 // It checks a few cases to ensure the function behaves as expected.
 func TestIntMinTableDriven(t *testing.T) {
 	var tests = []struct {
