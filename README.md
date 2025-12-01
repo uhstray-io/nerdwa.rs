@@ -76,6 +76,19 @@ Run the benchmark with memory allocation statistics (without running tests):
 go test -benchmem -run=^$ -bench ^BenchmarkIntMin$ nerdwa.rs
 ```
 
+The `-run=^$` flag tells the `go test` command to run no tests, effectively skipping the test phase and only running benchmarks.
+The `-benchmem` flag enables memory allocation statistics for the benchmarks.
+The `-bench ^BenchmarkIntMin$` flag specifies that only the `BenchmarkIntMin` benchmark should be executed.
+The `^` and `$` symbols are Regex anchors that ensure an exact match for the benchmark name.
+
+
+Run a specific benchmark in the exercises/1 directory:
+
+```bash
+go test ./exercises/1/... -bench=BenchmarkIntMin
+```
+
+
 
 ## Contributing
 

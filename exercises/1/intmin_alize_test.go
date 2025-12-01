@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func IntMin(a, b int) int {
+func IntMin_Alize(a, b int) int {
 	if a < b {
 		return a
 	}
@@ -14,7 +14,7 @@ func IntMin(a, b int) int {
 
 // This is a basic testing function.
 // It checks a few cases to ensure the function behaves as expected.
-func TestIntMinTableDriven(t *testing.T) {
+func TestIntMinTableDriven_Alize(t *testing.T) {
 	var tests = []struct {
 		a, b int
 		want int
@@ -29,7 +29,7 @@ func TestIntMinTableDriven(t *testing.T) {
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%d,%d", tt.a, tt.b)
 		t.Run(testname, func(t *testing.T) {
-			ans := IntMin(tt.a, tt.b)
+			ans := IntMin_Alize(tt.a, tt.b)
 			if ans != tt.want {
 				t.Errorf("got %d, want %d", ans, tt.want)
 			}
@@ -39,8 +39,8 @@ func TestIntMinTableDriven(t *testing.T) {
 
 // This is a basic benchmarking function for IntMin.
 // It measures the time taken to execute the function multiple times.
-func BenchmarkIntMin(b *testing.B) {
+func BenchmarkIntMin_Alize(b *testing.B) {
 	for b.Loop() { // Use b.Loop() for better benchmarking. (Disables compiler optimizations)
-		IntMin(1, 2)
+		IntMin_Alize(1, 2)
 	}
 }
